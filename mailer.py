@@ -3,4 +3,3 @@ import smtplib as sm
 import sys
 
 s=Argument(sys.argv)
-print(type(s))
