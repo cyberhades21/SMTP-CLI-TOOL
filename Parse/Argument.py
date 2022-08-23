@@ -20,12 +20,16 @@ class Argument:
 			else:
 				#its a command
 				self.commands.append(arg)
-				
+
 	def has_options(self,options):
 		userOptions = set(self.options)
 		reqired = set(options)
 		return list(reqired & userOptions)
-	
+	def get_optionvalues(self,options,default=None):
+		if options in self.optionvalues:
+			return self.optionvalues[options]
+		else:
+			return default
 
 		
 	
