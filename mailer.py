@@ -3,3 +3,4 @@ import smtplib as sm
 import sys
 
 s=Argument(sys.argv)
+print(s.has_options(['--helr'])) 
