@@ -25,11 +25,22 @@ class Argument:
 		userOptions = set(self.options)
 		reqired = set(options)
 		return list(reqired & userOptions)
+
 	def get_optionvalues(self,options,default=None):
 		if options in self.optionvalues:
 			return self.optionvalues[options]
 		else:
 			return default
+	def hasOptions(self, options: list):
+		useroptions = set(self.options)
+		reqoptions = set(options)
+		return len(list(reqoptions & useroptions)) == len(options)
+	def hasOption(self, option):
+		return option in self.hasOptions([option])
+
+	def hasOptionValue(self, option):
+		return option in self.optionValues
+
 
 		
 	
